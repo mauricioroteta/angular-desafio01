@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ajusta la altura de la página al 100% del viewport */
+}
+
+.main-content {
+  display: flex;
+  flex: 1; /* El contenido principal ocupará todo el espacio restante */
+}
+
+.sidebar {
+  width: 200px; /* Ancho fijo de la barra lateral */
+}
+
+.content {
+  flex: 1; /* El área de contenido principal ocupará todo el espacio restante */
+}
+
+.title {
+  text-align: center;
+  padding-top: 1rem;
+}
