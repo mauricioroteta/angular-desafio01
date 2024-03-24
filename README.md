@@ -42,3 +42,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 5. Creo el contenido de cada componente en los html correspondiente.
 6. Puedo correr el proyecto con ng serve
 7. Proyecto git en https://github.com/mauricioroteta/angular-desafio01.git
+
+
+Use https://www.mockaroo.com/ para generar el json
+
+iconos = https://fonts.google.com/icons
+
+paginador
+npm install ngx-pagination --save
+https://github.com/michaelbromley/ngx-pagination/blob/master/README.md

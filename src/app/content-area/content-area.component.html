@@ -1,55 +1,44 @@
+<h2 class="title">Alumnos</h2>
+
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
-      <th scope="ID">#</th>
+      <th scope="ID">ID</th>
       <th scope="col">Apellido</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Telefono</th>
+      <th scope="col">telefono</th>
+      <th scope="col">E-Mail</th>
+      <th scope="col">Activo</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Rodriguez</td>
-      <td>Juan Andres</td>
-      <td>Colón 86</td>
-      <td>XXXX5232</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Narciso </td>
-      <td>Julian</td>
-      <td>Rivadavia 1523</td>
-      <td>XXXX9642</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Silva</td>
-      <td>Emilio Jose</td>
-      <td>Castelli 963</td>
-      <td>XXXX2366</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Josep</td>
-      <td>Maria Fariña</td>
-      <td>Saavedra 193</td>
-      <td>XXXX7845</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Burgos</td>
-      <td>Mario</td>
-      <td>Quintana 65</td>
-      <td>XXXX6369</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Solis</td>
-      <td>Jose</td>
-      <td>Viedma 12</td>
-      <td>XXXX9360</td>
+    <tr *ngFor="let alumno of alumnos | paginate: { itemsPerPage: pageSize, currentPage: p}"
+    [ngClass]="{
+      'table-danger': alumno.activo === false
+    }">
+      <td>{{ alumno.id }}</td>
+      <td>{{ alumno.nombre }}</td>
+      <td>{{ alumno.apellido }}</td>
+      <td>{{ alumno.email }}</td>
+      <td>{{ alumno.telefono }}</td>
+      <td>
+        <!-- Usando *ngIf -->
+        <ng-container *ngIf="alumno.activo">
+          <i class="bi bi-check2-circle green"></i>
+        </ng-container>
+        <ng-container *ngIf="!alumno.activo">
+          <i class="bi bi-x-circle red"></i>
+        </ng-container>
+      </td>
     </tr>
   </tbody>
 </table>
+
+<pagination-controls class="pagina" (pageChange)="p = $event"
+                                    [previousLabel]="'Anterior'"
+                                    [nextLabel]="'Siguiente'"
+                                    [maxSize]="9"
+                                    [directionLinks]="true"
+                                    [autoHide]="true"
+                                    [responsive]="true">
+</pagination-controls>
