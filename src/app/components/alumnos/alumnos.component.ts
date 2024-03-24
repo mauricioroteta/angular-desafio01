@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import AlumnosJson from '../alumnos.json';
+import AlumnosJson from '../../alumnos.json';
 import { NgxPaginationModule } from 'ngx-pagination'; // Importa NgxPaginationModule
 
 

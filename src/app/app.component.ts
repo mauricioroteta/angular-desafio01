@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToolbarComponent } from "./toolbar/toolbar.component";
-import { SidebarComponent } from "./sidebar/sidebar.component";
-import { alumnosComponent } from "./alumnos/alumnos.component";
+import { ToolbarComponent } from "./components/toolbar/toolbar.component";
+import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { alumnosComponent } from "./components/alumnos/alumnos.component";
 import {NgxPaginationModule} from 'ngx-pagination';
 @Component({
     selector: 'app-root',
