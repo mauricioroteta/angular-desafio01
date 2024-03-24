@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import AlumnosJson from '../../alumnos.json';
+import AlumnosJson from '../../../assets/alumnos.json';
 import { NgxPaginationModule } from 'ngx-pagination'; // Importa NgxPaginationModule
 
 
@@ -11,6 +11,7 @@ interface ALUMNOS {
   telefono: String;
   email: String;
   activo: boolean;
+  avatar: String;
 }
 
 @Component({
@@ -29,7 +30,7 @@ export class alumnosComponent {
   p: number = 1;
 
   // Cantidad de elementos por página
-  pageSize: number = 8;
+  pageSize: number = 6;
 
   constructor(){
     console.log(this.alumnos);
