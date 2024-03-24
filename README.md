@@ -33,12 +33,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     Creo los otros 3 componentes:
       SidebarComponent: ng generate component sidebar
       ToolbarComponent: ng generate component toolbar
-      Content-AreaComponent: ng generate component content-area
+      alumnosComponent: ng generate component alumnos
 3. En app-component creamos la estructura basica referenciando los 3 layouts anteriormente creados
 4.  Importo en app.component.ts los componentes creados
     import { ToolbarComponent } from "./toolbar/toolbar.component";
     import { SidebarComponent } from "./sidebar/sidebar.component";
-    import { ContentAreaComponent } from "./content-area/content-area.component";
+    import { alumnosComponent } from "./alumnos/alumnos.component";
 5. Creo el contenido de cada componente en los html correspondiente.
 6. Puedo correr el proyecto con ng serve
 7. Proyecto git en https://github.com/mauricioroteta/angular-desafio01.git

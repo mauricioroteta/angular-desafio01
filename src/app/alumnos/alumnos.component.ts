@@ -14,15 +14,15 @@ interface ALUMNOS {
 }
 
 @Component({
-  selector: 'app-content-area',
+  selector: 'app-alumnos',
   standalone: true,
   imports: [CommonModule,
     NgxPaginationModule],
-  templateUrl: './content-area.component.html',
-  styleUrl: './content-area.component.scss'
+  templateUrl: './alumnos.component.html',
+  styleUrl: './alumnos.component.scss'
 })
 
-export class ContentAreaComponent {
+export class alumnosComponent {
   alumnos: ALUMNOS[] = AlumnosJson;
 
   // Pagina inicial
